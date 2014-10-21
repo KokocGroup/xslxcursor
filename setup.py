@@ -1,9 +1,12 @@
 from setuptools import setup
 
+
+VERSION = "0.1.1"
+
 setup(
     name='Xlsxcursor',
     description="Xlsxcursor for xlsxwriter.",
-    version='0.1',
+    version=VERSION,
     packages=['xlsxcursor'],
     install_requires=[
         'xlsxwriter',
