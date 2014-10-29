@@ -112,6 +112,12 @@ class XlsxCursor(object):
             self.row = row
         if column:
             self.column = column
+    
+    def point_cursor(self, row=None, column=None):
+        if row is not None:
+            self.row = row
+        if column is not None:
+            self.column = column
 
     def set_start_position(self, row=0, column=0):
         self.start_row = row
