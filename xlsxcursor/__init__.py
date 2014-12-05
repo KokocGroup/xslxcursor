@@ -108,12 +108,6 @@ class XlsxCursor(object):
         self.write(value, width, height, format_params)
 
     def change_cursor(self, row=None, column=None):
-        if row:
-            self.row = row
-        if column:
-            self.column = column
-    
-    def point_cursor(self, row=None, column=None):
         if row is not None:
             self.row = row
         if column is not None:
