@@ -31,12 +31,12 @@ class XlsxCursor(object):
         if isinstance(format_dict, Format):
             return format_dict
 
-        current_format = dict(self.default_format.items() + format_dict.items())
+        current_format = dict(list(self.default_format.items()) + list(format_dict.items()))
         color = self.column_colors.get(self.column)
         if color:
             current_format['bg_color'] = color
 
-        format_key = tuple(current_format.iteritems())
+        format_key = tuple(current_format.items())
         if format_key in self._formats:
             format_object = self._formats[format_key]
         else:
